@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-// pages
-import 'package:flutter_tut_ui/pages/easybee/ez_login_form.dart';
+// import routes
+import 'package:flutter_tut_ui/router/route_names.dart';
+
 
 // components
 import '../../components/logo_stack.dart';
@@ -41,9 +42,7 @@ class _EzLoginPageUIState extends State<EzLoginPageUI> {
 									padding: EdgeInsets.only(left: 20.0, right: 10.0, top: 10.0),
 									child: GestureDetector(
 										onTap: () {
-											Navigator.push(context, MaterialPageRoute(
-												builder: (context) => LoginPage(),
-											),);
+											Navigator.pushNamed(context, EZ_LOGIN_FORM_ROUTE);
 										},
 										child: Container(
 											alignment: Alignment.center,

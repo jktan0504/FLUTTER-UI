@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
+// routers
+import './router/index.dart' as router;
+import './router/route_names.dart';
+
 // pages
 import 'package:flutter_tut_ui/pages/easybee/ez_login_main.dart';
+import 'package:flutter_tut_ui/pages/undefined/underfined_view.dart';
 
 // components
 import './components/logo_stack.dart';
@@ -18,6 +23,9 @@ class MyApp extends StatelessWidget {
 				primarySwatch: Colors.pink,
 				fontFamily: 'Roboto'
 			),
+			initialRoute: HOME_MAIN_ROUTE,
+			onGenerateRoute: router.generateRoute,
+			onUnknownRoute: (settings) => MaterialPageRoute(builder: (context) => UndefinedView(name: settings.name,)),
 			home: MyHomePage(title: 'Flutter Demo Home Page'),
 		);
 	}
@@ -62,9 +70,12 @@ class _MyHomePageState extends State<MyHomePage> {
 												Expanded(
 													child: RaisedButton(
 														onPressed: () {
-															Navigator.push(context, MaterialPageRoute(
-																builder: (context) => EzLoginPageUI(),
-															),);
+															// Using Push Component
+															//  Navigator.push(context, MaterialPageRoute(
+															//	    builder: (context) => EzLoginPageUI(),
+															//  ),);
+															
+															Navigator.pushNamed(context, EZ_LOGIN_MAIN_ROUTE, arguments: '');
 														},
 														color: Color(0xFF18D191),
 														child: Padding(padding: EdgeInsets.all(20.0),

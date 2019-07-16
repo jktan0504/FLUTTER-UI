@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_tut_ui/router/route_names.dart';
+
 // components
 import '../../components/logo_stack.dart';
 // pages
@@ -96,9 +98,11 @@ class _LoginPageState extends State<LoginPage> {
 									padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 0.0),
 									child: GestureDetector(
 										onTap: () {
-											Navigator.push(context, MaterialPageRoute(
-												builder: (context) => EzHomePage(),
-											),);
+											//Navigator.push(context, MaterialPageRoute(
+											//	builder: (context) => EzHomePage(),
+											//),);
+											
+											Navigator.pushNamed(context, EZ_HOME_ROUTE);
 										},
 										child: Container(
 											alignment: Alignment.center,

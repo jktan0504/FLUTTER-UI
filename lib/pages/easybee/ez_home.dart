@@ -1,13 +1,39 @@
 import 'package:flutter/material.dart';
 
+// components
+import '../easybee/ez_profile.dart';
+
 class EzHomePage extends StatefulWidget {
   @override
   _EzHomePageState createState() => _EzHomePageState();
 }
 
-class _EzHomePageState extends State<EzHomePage> {
+class _EzHomePageState extends State<EzHomePage> with SingleTickerProviderStateMixin{
 	
 	int _btmNavIndex = 0;
+	
+	List<Widget> _tabViewItemsLists = [
+		_MainEzHomeContent(),
+		_MainEzHomeContent(),
+		_MainEzHomeContent(),
+		_MainEzHomeContent(),
+		EzProfilePage(),
+	];
+	
+	TabController _tabController;
+	
+	@override
+	void initState() {
+		super.initState();
+		_tabController = TabController(length: _tabViewItemsLists.length, vsync: this);
+		_tabController.animateTo(_btmNavIndex);
+	}
+	
+	@override
+	void dispose() {
+		_tabController.dispose();
+	    super.dispose();
+	}
 	
   @override
   Widget build(BuildContext context) {
@@ -19,7 +45,10 @@ class _EzHomePageState extends State<EzHomePage> {
 			    color: Color(0xFF18D191),
 		    ),
 	    ),
-	    body: _MainEzHomeContent(),
+	    body: TabBarView(
+		    controller: _tabController,
+		    children: _tabViewItemsLists,
+	    ),
 	    bottomNavigationBar: BottomNavigationBar(
 		    type: BottomNavigationBarType.fixed,
 		    fixedColor: Color(0xFF29D091),
@@ -27,6 +56,7 @@ class _EzHomePageState extends State<EzHomePage> {
 		    onTap: (int index) {
 			    setState(() {
 				    _btmNavIndex = index;
+				    _tabController.animateTo(_btmNavIndex);
 			    });
 		    },
 		    items: [
@@ -59,7 +89,6 @@ class _EzHomePageState extends State<EzHomePage> {
 
 class _MainEzHomeContent extends StatelessWidget {
 	
-
     @override
     Widget build(BuildContext context) {
         // TODO: implement build
