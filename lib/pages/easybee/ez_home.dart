@@ -6,6 +6,9 @@ class EzHomePage extends StatefulWidget {
 }
 
 class _EzHomePageState extends State<EzHomePage> {
+	
+	int _btmNavIndex = 0;
+	
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,6 +20,39 @@ class _EzHomePageState extends State<EzHomePage> {
 		    ),
 	    ),
 	    body: _MainEzHomeContent(),
+	    bottomNavigationBar: BottomNavigationBar(
+		    type: BottomNavigationBarType.fixed,
+		    fixedColor: Color(0xFF29D091),
+		    currentIndex: _btmNavIndex,
+		    onTap: (int index) {
+			    setState(() {
+				    _btmNavIndex = index;
+			    });
+		    },
+		    items: [
+		    	BottomNavigationBarItem(
+				    title: Text('Home'),
+				    icon: Icon(Icons.home)
+			    ),
+			    BottomNavigationBarItem(
+				    title: Text('Offers'),
+				    icon: Icon(Icons.local_offer)
+			    ),
+			    BottomNavigationBarItem(
+				    title: Text('Notifications'),
+				    icon: Icon(Icons.notifications)
+			    ),
+			    BottomNavigationBarItem(
+				    title: Text('Message'),
+				    icon: Icon(Icons.message)
+			    ),
+			    BottomNavigationBarItem(
+				    title: Text('Profile'),
+				    icon: Icon(Icons.verified_user)
+			    ),
+			    
+		    ]
+	    ),
     );
   }
 }
