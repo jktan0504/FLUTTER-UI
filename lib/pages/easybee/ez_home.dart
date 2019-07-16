@@ -197,6 +197,218 @@ class _MainEzHomeContent extends StatelessWidget {
 											        ),
 										        ],
 									        ),
+									        SizedBox(
+										        height: 10.0,
+									        ),
+									        
+									        // first row
+									        Row(
+										        children: <Widget>[
+										        	Expanded(
+												        child: Text('Popular Trending',
+												            style: TextStyle(
+													            fontSize: 18.0
+												            ),
+												        )
+											        ),
+											        Expanded(
+												        child: Text('View All',
+													        style: TextStyle(
+														        fontSize: 18.0,
+														        color: Color(0xFF18D191)
+													        ),
+													        textAlign: TextAlign.end,
+												        )
+											        ),
+										        ],
+									        ),
+									        SizedBox(
+										        height: 10.0,
+									        ),
+									        Row(
+										        children: <Widget>[
+										            Expanded(
+											            child: Container(
+												            height: 150.0,
+												            child: Column(
+													            children: <Widget>[
+													            	Container(
+															            height: 100.0,
+															            decoration: BoxDecoration(
+																            borderRadius: BorderRadius.circular(5.0),
+																            image: DecorationImage(
+																	            image: NetworkImage('https://www.howtogeek.com/wp-content/uploads/2016/01/steam-and-xbox-controllers.jpg'),
+																	            fit: BoxFit.cover
+																            ),
+															            ),
+														            ),
+														            Text(
+															            'Play Station IV',
+															            style: TextStyle(fontSize: 16.2),
+														            ),
+													            ],
+												            ),
+											            ),
+										            ),
+													SizedBox(width: 5.0,),
+											        Expanded(
+												        child: Container(
+													        height: 150.0,
+													        child: Column(
+														        children: <Widget>[
+															        Container(
+																        height: 100.0,
+																        decoration: BoxDecoration(
+																	        borderRadius: BorderRadius.circular(5.0),
+																	        image: DecorationImage(
+																		        image: NetworkImage('https://pawanjewellers.in/wp-content/uploads/2016/09/Jewellery-new.jpg'),
+																		        fit: BoxFit.cover
+																	        ),
+																        ),
+															        ),
+															        Text(
+																        'Jewellery and Watches ',
+																        style: TextStyle(fontSize: 16.2),
+															        ),
+														        ],
+													        ),
+												        ),
+											        ),
+											        SizedBox(width: 5.0,),
+											        Expanded(
+												        child: Container(
+													        height: 150.0,
+													        child: Column(
+														        children: <Widget>[
+															        Container(
+																        height: 100.0,
+																        decoration: BoxDecoration(
+																	        borderRadius: BorderRadius.circular(5.0),
+																	        image: DecorationImage(
+																		        image: NetworkImage('http://images4.fanpop.com/image/photos/21600000/Electronics-hd-wallpaper-21627626-1920-1200.jpg'),
+																		        fit: BoxFit.cover
+																	        ),
+																        ),
+															        ),
+															        Text(
+																        'Electronics',
+																        style: TextStyle(fontSize: 16.2),
+															        ),
+														        ],
+													        ),
+												        ),
+											        ),
+											        
+											        // Second Row
+											        
+											        
+										        ],
+									        ),
+									        
+									        // second row
+									        // first row
+									        Row(
+										        children: <Widget>[
+											        Expanded(
+												        child: Text('Popular Trending',
+													        style: TextStyle(
+														        fontSize: 18.0
+													        ),
+												        )
+											        ),
+											        Expanded(
+												        child: Text('View All',
+													        style: TextStyle(
+														        fontSize: 18.0,
+														        color: Color(0xFF18D191)
+													        ),
+													        textAlign: TextAlign.end,
+												        )
+											        ),
+										        ],
+									        ),
+									        SizedBox(
+										        height: 10.0,
+									        ),
+									        Row(
+										        children: <Widget>[
+											        Expanded(
+												        child: Container(
+													        height: 150.0,
+													        child: Column(
+														        children: <Widget>[
+															        Container(
+																        height: 100.0,
+																        decoration: BoxDecoration(
+																	        borderRadius: BorderRadius.circular(5.0),
+																	        image: DecorationImage(
+																		        image: NetworkImage('https://www.howtogeek.com/wp-content/uploads/2016/01/steam-and-xbox-controllers.jpg'),
+																		        fit: BoxFit.cover
+																	        ),
+																        ),
+															        ),
+															        Text(
+																        'Play Station IV',
+																        style: TextStyle(fontSize: 16.2),
+															        ),
+														        ],
+													        ),
+												        ),
+											        ),
+											        SizedBox(width: 5.0,),
+											        Expanded(
+												        child: Container(
+													        height: 150.0,
+													        child: Column(
+														        children: <Widget>[
+															        Container(
+																        height: 100.0,
+																        decoration: BoxDecoration(
+																	        borderRadius: BorderRadius.circular(5.0),
+																	        image: DecorationImage(
+																		        image: NetworkImage('https://pawanjewellers.in/wp-content/uploads/2016/09/Jewellery-new.jpg'),
+																		        fit: BoxFit.cover
+																	        ),
+																        ),
+															        ),
+															        Text(
+																        'Jewellery and Watches ',
+																        style: TextStyle(fontSize: 16.2),
+															        ),
+														        ],
+													        ),
+												        ),
+											        ),
+											        SizedBox(width: 5.0,),
+											        Expanded(
+												        child: Container(
+													        height: 150.0,
+													        child: Column(
+														        children: <Widget>[
+															        Container(
+																        height: 100.0,
+																        decoration: BoxDecoration(
+																	        borderRadius: BorderRadius.circular(5.0),
+																	        image: DecorationImage(
+																		        image: NetworkImage('http://images4.fanpop.com/image/photos/21600000/Electronics-hd-wallpaper-21627626-1920-1200.jpg'),
+																		        fit: BoxFit.cover
+																	        ),
+																        ),
+															        ),
+															        Text(
+																        'Electronics',
+																        style: TextStyle(fontSize: 16.2),
+															        ),
+														        ],
+													        ),
+												        ),
+											        ),
+											
+											        // Second Row
+										
+										
+										        ],
+									        )
 								        ],
 							        ),
 						        ),
