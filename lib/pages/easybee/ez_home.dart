@@ -26,7 +26,6 @@ class _EzHomePageState extends State<EzHomePage> with SingleTickerProviderStateM
 	void initState() {
 		super.initState();
 		_tabController = TabController(length: _tabViewItemsLists.length, vsync: this);
-		_tabController.animateTo(_btmNavIndex);
 	}
 	
 	@override
